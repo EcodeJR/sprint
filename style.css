@@ -1031,16 +1031,16 @@ body{
 }
 @media only screen and (max-width: 430px) {
     .downloadlinks{
-        height: 120vh;
+        height: fit-content;
     }
     .downloadcard{
         width: 70%;
-        height: 80%;
+        height: fit-content;
         flex-direction: column;
     }
     .downloadcardtext{
         width: 100%;
-        height: 50%;
+        height: fit-content;
         padding: 10px;
     }
     .downloadbtn{
@@ -1051,7 +1051,7 @@ body{
     }
     .downloadcardimg{
         width: 100%;
-        height: 50%;
+        height: 60%;
     }
     .downloadcardimg img{
         height: 50vh;
