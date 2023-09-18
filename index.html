@@ -32,7 +32,7 @@
     <section class="home">
         <h1>THE DRI<span>VE</span></h1>
         <h2>We'll get you to your destination in NO time</h2>
-        <button class="book">BOOK A RIDE</button>
+        <button class="book" id="bookAride">BOOK A RIDE</button>
         <div class="social">
             <div class="icon">
                 <i class="bx bxl-facebook"></i> <span>Facebook</span>
@@ -50,17 +50,86 @@
                 <i class="bx bxl-discord-alt"></i> <span>Discord</span>
             </div>
         </div>
-        <!--
-        <form action="get">
-            <h1>Booking Ticket</h1>
-            <input type="text" name="Firstname" id="firstname" placeholder="Firstname">
-            <input type="text" name="Lastname" id="lastname" placeholder="Lastname">
-            <input type="number" name="Phone" id="phone" placeholder="Phone">
-            <input type="email" name="Email" id="email" placeholder="email">
-            <input type="text" name="Address" id="address" placeholder="Address">
-            <input type="text" name="Gender" id="gender" placeholder="Gender">
-        </form>
-        -->
+
+
+        <div class="blur_booking" id="maindiv">
+            <div class="booking">
+
+                    <i class='bx bx-x' id="closebooking"></i>
+
+                    <form action="post" id="user" class="user">
+                            <h1>User Profile</h1>
+                            <input type="text" name="Firstname" id="firstname" placeholder="Firstname">
+                            <input type="text" name="Lastname" id="lastname" placeholder="Lastname">
+                            <input type="number" name="Phone" id="phone" placeholder="Phone">
+                            <input type="email" name="Email" id="email" placeholder="email">
+                            <input type="text" name="Address" id="address" placeholder="Address">
+                            <input type="text" name="Gender" id="gender" placeholder="Gender">
+                            <button class="submitbooking" id="userbtn" onclick="validateForm()">NEXT</button>
+                    </form>
+
+                    <form action="post" id="tickets">
+                        <h1>Booking Ticket | Rental</h1>
+                        <div class="bookingInputBtn">
+                            <select title="bookingtype" name="bookingtype" id="bookingtype">
+                                <option value="Ticket">
+                                    Ticket
+                                </option>
+                                <option value="Rental">
+                                    Rental
+                                </option>
+                            </select>
+                            <button type="button" class="booktypebtn" onclick="BookingType()">PICK</button>
+                        </div>
+                        <div class="ticket" id="ticketDets">
+                            <input type="text" name="From" id="from" placeholder="Enter pickup location">
+                            <input type="text" name="To" id="to" placeholder="Enter destination">
+                            <select title="travelMeans" name="travelMeans" id="travelMeans">
+                                    <option value="Road">
+                                        Road
+                                    </option>
+                                    <option value="Sea">
+                                        Sea
+                                    </option>
+                                    <option value="Air">
+                                        Air
+                                    </option>
+                                </select>
+                            <input title="date" type="date" name="Travel Date" id="traveldate">
+                            <button type="button" class="submitbooking" id="tickettravelbtn">NEXT</button>
+                        </div>
+                        <div class="rental" id="rentalDets">
+                                <input type="text" name="From" id="from0" placeholder="Enter pickup location">
+                                <input type="text" name="To" id="to0" placeholder="Enter destination">
+                                <select title="RentalCars" name="RentalCars" id="RentalCars">
+                                        <option value="BMW">
+                                            BMW
+                                        </option>
+                                        <option value="TOYOTA">
+                                            TOYOTA
+                                        </option>
+                                        <option value="BENZ">
+                                            BENZ
+                                        </option>
+                                        <option value="VENZA">
+                                                VENZA
+                                        </option>
+                                    </select>
+                                <input title="date" type="date" name="Travel Date" id="rentaldate">
+                                <button type="button" class="submitbooking" id="ticketrentalbtn">NEXT</button>
+                            </div>
+                        
+                    </form>
+
+                    <div class="success" id="success">
+                        <img src="./img/Successful1.gif" alt="An gif showing the booking was successful">
+                        <h3><span>woohoo</span> your RIDE'S on it's way....</h3>
+                        <button class="finishbtn" id="finishbtn">FINISH</button>
+                    </div>
+            </div>
+        </div>
+
+        
     </section>
     <section class="about">
         <div class="abttext">

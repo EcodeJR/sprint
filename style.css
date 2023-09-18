@@ -210,7 +210,7 @@ body{
         font-size: 40px
     }
     .nav{
-        width: 100%;
+        width: 100vw;
     }
     .logo h1{
         font-size: 25px;
@@ -273,6 +273,236 @@ body{
         flex-direction: row;
         align-items: center;
         padding: 5px;
+    }
+}
+
+/*----------------booking----------------------*/
+.blur_booking{
+    width: 100vw;
+    min-height: 100vh;
+    backdrop-filter: blur(20px);
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: -100vw;
+    z-index: 200;
+    transition: all .4s ease-in-out;
+}
+.booking{
+    background: #fefcf0;
+    padding: 20px;
+    min-height: 80vh;
+    width: 50vw;
+    border-radius: 10px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+#closebooking{
+    position: absolute;
+    top: 0;
+    right: -50px;
+    font-size: 40px;
+    font-weight: 600;
+    color: #d00;
+    cursor: pointer;
+}
+.booking form,
+.success{
+    width: 100%;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: all .4s ease-in-out;
+}
+#user{
+    display: flex;
+}
+.success{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+}
+.booking form h1{
+    font-size: 20px;
+    text-transform: uppercase;
+    color: #100e34;
+    font-weight: 600;
+}
+.booking form input{
+    margin: 10px;
+    padding: 5px;
+    font-size: 17px;
+    border: 1px solid rgba(0, 0, 0, .1);
+    border-radius: 5px;
+    outline: none;
+    background: transparent;
+    width: 70%;
+    height: 7vh;
+}
+.booking form #userbtn,
+.booking form #ticketbtn,
+.booktypebtn{
+    padding: 14px 20px;
+    width: 60px;
+    height: 40px;
+    cursor: pointer;
+    font-size: 15px;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    background: #6400fd;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#bookingtype{
+    width: 30vw;
+    height: 7vh;
+    padding: 10px;
+    margin: 10px;
+    font-size: 17px;
+    border: 1px solid rgba(247, 6, 6, 0.226);
+    border-radius: 5px;
+    outline: none;
+    background: transparent;
+}
+.bookingInputBtn{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.ticket,
+.rental{
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+}
+.ticket input,
+.rental input{
+    margin: 10px;
+    padding: 5px;
+    font-size: 17px;
+    border: 1px solid rgba(0, 0, 0, .1);
+    border-radius: 5px;
+    outline: none;
+    background: transparent;
+    width: 70%;
+    height: 7vh;
+}
+#travelMeans,
+#RentalCars{
+    width: 70%;
+    height: 7vh;
+    padding: 10px;
+    margin: 10px;
+    font-size: 17px;
+    border: 1px solid rgba(0, 0, 0, .1);
+    border-radius: 5px;
+    outline: none;
+    background: transparent;
+}
+.submitbooking{
+    padding: 14px 20px;
+    margin: 10px 0;
+    width: 70px;
+    height: 40px;
+    cursor: pointer;
+    font-size: 15px;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    background: #6400fd;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.success{
+    height: 100%;
+    width: 100%;
+    display: none;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+}
+.success img{
+    width: 50%;
+    object-fit: cover;
+    background: transparent;
+    margin: 30px auto;
+}
+.success h3{
+    font-size: 20px;
+    color: #100e34;
+    text-transform: uppercase;
+    text-align: center;
+}
+.success h3 span{
+    color: #ff8f18;
+}
+.finishbtn{
+    padding: 14px 20px;
+    margin: 10px 0;
+    width: 70px;
+    height: 40px;
+    cursor: pointer;
+    font-size: 15px;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    background: #6400fd;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+@media only screen and (max-width: 820px) {
+    .booking{
+        width: 90vw;
+    }
+    #closebooking{
+        position: absolute;
+        top: 0;
+        right: 10px;
+    }
+    .booking form input{
+        width: 80%;
+        height: 7vh;
+    }
+    .booking form #userbtn,
+.booking form #ticketbtn,
+.submitbooking,
+.finishbtn{
+    width: 100px;
+    height: 50px;
+}
+}
+@media only screen and (max-width: 430px) {
+    .booking{
+        width: 90vw;
+    }
+    #closebooking{
+        position: absolute;
+        top: 0;
+        right: 10px;
+    }
+    .booking form input{
+        width: 100%;
+        height: 7vh;
     }
 }
 
@@ -564,6 +794,21 @@ body{
     font-size: 14px;
     color: rgb(121, 121, 121);
 }
+@media only screen and (max-width: 820px) {
+    .bestservices{
+        min-height: 110vh;
+        flex-direction: column;
+    }
+    .servicesimg{
+        width: 100%;
+        height: 50vh;
+    }
+    .servicestext{
+        width: 100%;
+        height: fit-content;
+        padding: 10px;
+    }
+}
 @media only screen and (max-width: 430px) {
     .bestservices{
         min-height: 110vh;
@@ -629,6 +874,22 @@ body{
     transform: scale(1.5);
     transition: all .3s ease-in-out;
 }
+@media only screen and (max-width: 820px) {
+    .bestdeals{
+        min-height: fit-content;
+        overflow: hidden;
+        padding: 20px;
+    }
+    .bestdealsgrid{
+        display: grid;
+        place-items: center;
+        grid-template-columns: 1fr 1fr;
+    }
+    .bestdealsgrid .img{
+        width: 100%;
+    }
+}
+
 @media only screen and (max-width: 430px) {
     .bestdeals{
         min-height: fit-content;
@@ -732,6 +993,16 @@ body{
     object-fit: contain;
     object-position: center;
 }
+
+@media only screen and (max-width: 820px) {
+    .textimgstyle img{
+        width: 35vw;
+        height: 50vh;
+        object-fit: contain;
+        object-position: center;
+    }
+}
+
 @media only screen and (max-width: 430px) {
     .drivestyle{
         height: 120vh;
@@ -962,7 +1233,7 @@ body{
     color: #4f48ec;
   }
   /*downloadlinks*/
-  .downloadlinks{
+.downloadlinks{
       height: 100vh;
       width: 100%;
       display: flex;
@@ -995,7 +1266,8 @@ body{
 .downloadcardtext p{
     font-size: 14px;
     color: #fff;
-    margin: 10px 0;
+    margin: 10px 10px;
+    text-align: center;
 }
 .downloadbtn{
     display: flex;
@@ -1033,6 +1305,12 @@ body{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+
+@media only screen and (max-width: 820px) {
+    .downloadlinks{
+        overflow: hidden;
+    }
 }
 @media only screen and (max-width: 430px) {
     .downloadlinks{
@@ -1072,6 +1350,7 @@ footer{
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
+    padding: 5px;
 }
 .footer1{
     width: 100%;
